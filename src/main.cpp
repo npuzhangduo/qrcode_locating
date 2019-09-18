@@ -5,9 +5,9 @@ using namespace std;
 int main(int argc, char const *argv[])
 {
     MyQRCodeLocating* test = new MyQRCodeLocating();
-    bool isVideo = true;
+    bool isVideo = false;
     int num = 0;
-    int image_numbers = 0;
+    int image_numbers = 2;
     cv::VideoCapture cap(0);
     cv::Mat image;
     cv::Mat resImage;
