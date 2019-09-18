@@ -1,15 +1,15 @@
-目录结构说明：
-src_image 文件夹为测试图片的原图片
-result_image 文件夹为结果图片
-src 文件夹中为源代码
-include 文件夹中为头文件
-CMakeLists.txt文件
-configure.sh为编译该工程的自动化脚本
-clean.sh为清理编译生成的build文件夹的脚本
+# 目录结构说明：
+src_image 文件夹为测试图片的原图片\
+result_image 文件夹为结果图片 \
+src 文件夹中为源代码 \
+include 文件夹中为头文件 \
+CMakeLists.txt文件 \
+configure.sh为编译该工程的自动化脚本 \
+clean.sh为清理编译生成的build文件夹的脚本 \
 
 
 
-工程的编译以及运行方法：
+# 工程的编译以及运行方法：
 首先在终端运行configure.sh完成工程的编译，
 完成编译后可执行文件main变出现在build文件夹中，
 然后进去build文件夹，即可在终端执行该工程。
