@@ -7,7 +7,7 @@ int main(int argc, char const *argv[])
     MyQRCodeLocating* test = new MyQRCodeLocating();
     bool isVideo = false;
     int num = 0;
-    int image_numbers = 2;
+    int image_numbers = 39;
     cv::VideoCapture cap(0);
     cv::Mat image;
     cv::Mat resImage;

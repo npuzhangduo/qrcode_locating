@@ -215,7 +215,6 @@ bool MyQRCodeLocating::paintingBox(vector<vector<cv::Point> > &contours,vector<c
     contours.clear();
     mc.clear();
      
-    vector<vector<cv::Point> > threeContours;
     vector<cv::Point2f> threeCenter;
     if (finalContours.size() > 3)
     {
@@ -271,14 +270,14 @@ bool MyQRCodeLocating::paintingBox(vector<vector<cv::Point> > &contours,vector<c
     center.clear();
    
 
-    // cv::Mat drawing_three = cv::Mat::zeros(imageAfterResize.size(),CV_8U);
-    // for (int i = 0;i < threeContours.size();i++) {
-    //         cv::drawContours( drawing_three, threeContours, i ,cv::Scalar(255), 1, 8, hierarchy, 0, cv::Point() );
-    // }
+    cv::Mat drawing_three = cv::Mat::zeros(imageAfterResize.size(),CV_8U);
+    for (int i = 0;i < threeContours.size();i++) {
+            cv::drawContours( drawing_three, threeContours, i ,cv::Scalar(255), 1, 8, hierarchy, 0, cv::Point() );
+    }
     // cv::imshow("three contours",drawing_three);
     cv::namedWindow("result",1);
     
-
+    threeContoursImage = drawing_three.clone();
     if (threeContours.size() == 3) {
 
 
@@ -476,3 +475,16 @@ bool MyQRCodeLocating::mainProcess(bool big) {
     find = paintingBox(contoursAfterFilter,hierarchy);
     return find;
 }
+
+
+void MyQRCodeLocating::cornerDetect() {
+    cv::Mat drawing_three = cv::Mat::zeros(imageAfterResize.size(),CV_8U);
+    for (int i = 0;i < threeContours.size();i++) {
+            cv::drawContours( drawing_three, threeContours, i ,cv::Scalar(255), 1, 8, hierarchy, 0, cv::Point() );
+    }
+    cv::imshow("three contours",drawing_three);
+
+    cv::Mat dst = cv::Mat::zeros(threeContoursImage.size(),CV_8U);
+ 
+}
+

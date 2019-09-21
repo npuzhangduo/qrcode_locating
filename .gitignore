@@ -1,2 +1,5 @@
 .vscode
-
+build
+*.jpg
+src_image
+result_image

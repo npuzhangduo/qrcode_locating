@@ -16,6 +16,7 @@ public:
 
     bool imageProcess(cv::Mat &src,cv::Mat &res);
 
+    void cornerDetect();
 private:
 
     void myAdaptiveThreshold( cv::Mat &src, cv::Mat &dst, double maxValue,int type,int blockSize, double delta );
@@ -27,7 +28,11 @@ private:
     cv::Mat greyImage;
     cv::Mat threImage;
     cv::Mat resImage;
+    
+    cv::Mat threeContoursImage;
 
     vector<vector<cv::Point> >contours;
     vector<cv::Vec4i> hierarchy;
+
+    vector<vector<cv::Point> >threeContours;
 };

@@ -19,6 +19,7 @@ ${DIR_SRCS}
 find_package(OpenCV REQUIRED) 
 include_directories( ${OpenCV_INCLUDE_DIRS} ) 
 # Declare the executable target built from your sources 
+link_directories("/home/zhangduo/anaconda3/lib")
 add_executable(main src/main.cpp src/qrcode.cpp) # Link your application with OpenCV libraries
 target_link_libraries(main ${OpenCV_LIBS})
 
